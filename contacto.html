@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./fotos/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+
+  <header class="logomenu">
+    <h2>
+      <img src="./fotos/HR-Prospectiva-beige.jpg" class="logo" alt="logo RH Prospectiva">
+    </h2>
+    
+    <nav>
+      <ul>
+        <li><a href="./nuestra empresa.html">Nuestra empresa</a></li>
+        <li><a href="./index.html">Servicios ofrecidos</a>
+          <ul>
+            <li><a href="./diseño organiz.html">Diseño organizacional</a></li>
+            <li><a href="./capacit y desarrollo.html">Capacitación y Desarrollo</a></li>
+            <li><a href="./automatiz de procesos.html">Automatización de procesos</a></li>
+          </ul>
+        </li>
+        <li><a href="./ingreso.html">Ingreso</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+      <div class="contacto">
+              <h2 class="formulario">Contacto</h2>
+        <h4>No dudes en contactarnos. Con gusto abordaremos toda consulta o inquietud que tengas para relizarnos. En breve te responderemos o tomaremos contacto personal contigo.</h4>
+       
+        <fieldset>
+            <legend>Completa el siguiente formulario con tus datos y consulta</legend>
+            <form action="">
+                <div>
+                    <label for="nombres">Nombre</label>
+                    <input type="text" name="nombres">
+                </div>
+                <br>
+
+                <div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido">
+                </div>
+                <br>
+
+<!--INCORPORO UN CAMPO DE LLENADO OBLIGATORIO:"REQUIRED"-->
+                <div>
+                    <label for="email">Escribe tu email *</label>
+                    <input type="email" name="email"
+                    placeholder="campo obligatorio" required>
+                </div>
+                <br>
+
+
+                <div>
+                    <label for="celular">Teléfono (celular)</label>
+                    <input type="text" name="celular"placeholder="con cód.área y sin el '15'">
+                </div>
+                <br>
+
+                <div>
+                    <label for="usuario-registrado">¿Eres usuario registrado? *</label>
+                    <select id="usuario-registrado" name="usuario-registrado" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <br>
+
+                <div id="registro-opcion" style="display: none;">
+                    <label for="desea-registrarse">¿Desea registrarse ahora? *</label>
+                    <select id="desea-registrarse" name="desea-registrarse">
+                        <option value="">Seleccione una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <br>
+
+<!-- Consulta si desea ser contactado por un representante de la empresa -->
+<div>
+    <label for="contacto-representante">¿Desea ser contactado por un representante de la empresa? *</label>
+    <select id="contacto-representante" name="contacto-representante" required>
+        <option value="">Seleccione una opción</option>
+        <option value="no">No</option>
+        <option value="email">Sí, por e-mail</option>
+        <option value="telefono">Sí, por teléfono</option>
+    </select>
+</div>
+<br>
+
+<!-- Consulta sobre la preferencia de contacto -->
+<div id="preferencia-contacto" style="display: none;">
+    <label for="preferencia">¿Prefiere ser contactado vía mail o teléfono? *</label>
+    <select id="preferencia" name="preferencia">
+        <option value="">Seleccione una opción</option>
+        <option value="mail">Mail</option>
+        <option value="telefono">Teléfono</option>
+    </select>
+</div>
+<br>
+
+<!--INCORPORO UN CAMPO DEL TIPO "TEXTAREA" -->
+                <div>
+                    <label for="textarea">Esrcribe tu consulta</label>
+                    <br>
+                    <textarea name="comentario" id="" cols="20" rows="10"></textarea>
+                </div>
+                    <br>
+
+<!--INCORPORO UN BOTÓN PARA "ENVIAR" EL FORMULARIO-->
+                <div class="botonform">
+                <input type="submit" value="ENVIAR">
+                </div>
+                <br>
+
+<!--INCORPORO UN BOTÓN PARA "VACIAR" EL FORMULARIO-->
+                <div class="botonform">
+                <input type="reset" value="VACIAR LOS CAMPOS">
+                </div>
+
+
+            </form>
+
+        </fieldset>
+
+      </div>
+
+      
+  </main> <br><br>
+  
+    <footer>
+      <br>
+      <a href="./index.html">Volver al inicio</a>
+        <h3>Derechos reservados &copy;</h3>
+    </footer>
+
+  <script src="./Js/contacto.js"></script>
+
+</body>
+</html>

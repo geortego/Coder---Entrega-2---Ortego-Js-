@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Le cargo un tipo de letra seleccionada desde Google Fonts (la contrapartida ya la puse en el head del html, antes de la vinculación con este css */
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Reduce el padding para ocupar menos espacio */
+    background-color: #5c7ecc; /* Color más oscuro que el nav */
+}
+
+.logomenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 100px; /* Reduce el tamaño del logo */
+}
+
+/* Le incorporo un fondo gradiente a la nav, desde CSS Gradient */
+nav {
+    background: rgb(188,218,238);
+    background: linear-gradient(180deg, rgba(188,218,238,1) 0%, rgba(92,126,204,0.6643032212885154) 77%);
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: right;
+}
+
+/* Le saco los puntitos a la lista y le agrego padding para ir separando las opciones*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px; /* Reduce el espacio entre los elementos del menú */
+}
+
+/* Ahora me meto en la lista, comenzando con definirla como una "inline-block", con una position relative (condición necesaria para que luego que luego en el despegable me funcione la 'absoluta') */
+
+nav ul li {
+    position: relative;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    font-size: 1.7rem;
+
+/* Ahora agrego márgen (superior/inferior y laterales) para separar las opciones de menú */
+    margin: 10px 30px;
+}
+
+/* Ahora trabajo sobre los elementos del submenú (dentro de Servicios ofrecidos). Le ponemos position absolute y display none porque queremos que aparezcan solo cuando clickeemos sobre el menú */
+
+nav ul ul {
+    display: none;
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+}
+
+/* Ahora a las opciones de submenú que teníamos an línea, las ubicamos en bloque */
+
+ul ul li {
+    display: block;
+    text-align: left;
+}
+
+/* Ahora trabajo sobre el formato de texto del menú y submenú (los links del menú en el Inicio!!) */
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* PSEUDOCLASE "hover": ahora voy a hacer que cambie el color del texto al pasar con el mouse */
+
+a:hover {
+    color: rgb(106, 255, 0);
+    font-weight: bolder;
+}
+
+/* PSEUDOCLASE "hover": ahora voy a hacer que aparezcan los elementos ocultos del submenú al pasar el mouse */
+
+nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(188,218,238,1) 0%, rgba(92,126,204,0.6643032212885154) 77%);
+    padding: 10px;
+}
+
+ul li:hover ul {
+    display: block;
+    background-color: rgb(118, 80, 255);
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: 1.5rem;
+    border-top: 1.5rem;
+    color: white;
+    font-weight: bolder;
+}
+
+h2 {
+    color: white;
+    font-weight: bolder;
+}
+
+/* Le fijo una posición a la foto */
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+img {
+    width: 48%;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+h3 {
+    color: black;
+    size: 8rem;
+    text-align: center;
+    margin: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px; /* Reduce el padding del footer */
+    background-color: #f8f8f8;
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente del footer */
+    margin-left: 2rem;
+    width: 98%;
+    background-color: rgb(127, 184, 235);
+    padding: 0.5rem;
+}
+
+/* ESTILOS A PÁGINA "NUESTRA EMPRESA" */
+.title {
+    text-align: center;
+}
+
+.parrafo {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: larger;
+    color: white;
+    width: 65rem;
+    height: 65rem;
+    margin: 5px;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.parrafo h2 {
+    color: yellowgreen;
+}
+
+.contacto {
+    margin: 2rem;
+    padding: 1.2rem;
+    background-color: whitesmoke;
+    size: 600px;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.formulario {
+    color: black;
+}
+
+footer a {
+    color: blue;
+    /* text-decoration: solid; */
+    font-size: 1.7rem;
+    border-width: 4px;
+    border-color: black;
+    border-style: groove;
+    padding: 5px;
+    text-align: center;
+}
+
+.same-size {
+    width: 100%;
+    height: auto;
+}
+
+.image-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.image-text-container img {
+    width: 80%; /* Ajusta el tamaño de las imágenes */
+    margin-bottom: 10px;
+}
+
+.image-text-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image-text-container h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image-text-container p {
+    width: 80%; /* Ajusta el ancho de los párrafos al mismo ancho que las imágenes */
+    text-align: justify;
+    margin: 0 auto; /* Centra el texto */
+}
+
+.text-box {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 100%; /* Ajusta este valor según tus necesidades */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos para la página de ingreso */
+.ingreso-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-options {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  flex: 1;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.tab-button.active {
+  background-color: #5c7ecc;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.forgot-link {
+  color: #5c7ecc;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-submit {
+  background-color: #5c7ecc;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #4a63a0;
+}
+
+.help-text {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Nuevos estilos para la página de ingreso */
+.registro-section {
+    margin-top: 50px; /* Aumento de 30px a 50px para mayor separación */
+    padding-top: 10px; /* Añadido padding adicional */
+    border-top: 1px solid #ddd; /* Línea separadora opcional */
+}
+
+.contacto fieldset {
+    border: 2px solid #5c7ecc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+}
+
+.contacto legend {
+    font-weight: bold;
+    color: #5c7ecc;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    background-color: white;
+}
+
+.contacto label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contacto input[type="checkbox"] + label {
+    display: inline;
+    margin-left: 5px;
+}
+
+.forgot-link {
+    float: right;
+}
+
+.forgot-link a {
+    color: #5c7ecc;
+    text-decoration: none;
+}
+
+.forgot-link a:hover {
+    text-decoration: underline;
+    color: #4a63a0;
+}
+
+.botonform {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.botonform input {
+    background-color: #5c7ecc;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botonform input:hover {
+    background-color: #4a63a0;
+}
+
+.servicio img {
+    width: 80%; /* Reducir el tamaño de las fotos en un 20% */
+    margin: 0 auto; /* Centrar las imágenes */
+    display: block;
+}
+
+.servicio p {
+    width: 80%; /* Ajustar el ancho de los párrafos al mismo ancho que las imágenes */
+    margin: 10px auto; /* Centrar los párrafos */
+    text-align: justify;
+}
+
+/* Media Queries para diseño responsivo */
+@media (min-width: 769px) {
+    .image-text-container {
+        display: flex;
+        flex-direction: row; /* Asegura que las imágenes y los textos estén en fila */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .image-text-container > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 49%; /* Aumenta el tamaño máximo */
+    }
+
+    .same-size, .text-box {
+        max-width: 49%; /* Aumenta el tamaño máximo */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-text-container {
+        flex-direction: column; /* Asegura que las imágenes y los textos estén en columna */
+        width: 100%;
+    }
+
+    .image-text-container > div {
+        width: 100%; /* Ajusta el tamaño máximo según tus necesidades */
+        margin: 0; /* Elimina el margen en pantallas pequeñas */
+    }
+
+    .same-size, .text-box {
+        max-width: 100%; /* Ajusta el tamaño máximo según tus necesidades */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-text-container {
+        width: 100%;
+        max-width: 300px;
+        flex-direction: column;
+    }
+
+    .same-size, .text-box {
+        max-width: 100%;
+    }
+}
